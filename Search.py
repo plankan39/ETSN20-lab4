@@ -1,5 +1,12 @@
 import os
 
+def run():
+    args = [""]
+    while args[0] != "q":
+        args = input("enter command('q' to quit): ").split(" ")
+        res = search(args)
+        for line in res:    
+            print(line)
 
 def search(args):
     if args[0] != "search":
@@ -23,12 +30,7 @@ def search(args):
     return result
 
 def main():
-    args = [""]
-    while args[0] != "q":
-        args = input("enter command('q' to quit): ").split(" ")
-        res = search(args)
-        for line in res:    
-            print(line)
+    run()
 
 if __name__ == '__main__':
     main()
